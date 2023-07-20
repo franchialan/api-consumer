@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+    ports:
+      - "80:80"
+
+networks:
+  default:
+    name: "labs"
